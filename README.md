@@ -9,6 +9,44 @@ website][6].
 
 Follow Wes on Twitter: [![Twitter Follow](https://img.shields.io/twitter/follow/wesmckinn.svg?style=social&label=Follow)](https://twitter.com/wesmckinn)
 
+## Setup Instructions
+
+### Option 1: Using uv (Recommended)
+
+[uv](https://github.com/astral-sh/uv) is a fast Python package installer and resolver. To get started:
+
+1. Install uv if you haven't already:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+2. Start Jupyter Notebook with all dependencies:
+```bash
+uv run jupyter notebook
+```
+
+That's it! uv will automatically create a virtual environment and install all required packages from `pyproject.toml`.
+
+### Option 2: Using Conda
+
+1. Create a new conda environment:
+```bash
+conda create -n pydata-book python=3.11
+conda activate pydata-book
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Start Jupyter Notebook:
+```bash
+jupyter notebook
+```
+
+**Note:** This project uses pandas 2.0.3 to ensure compatibility with the notebooks.
+
 # 2nd Edition Readers
 
 If you are reading the 2nd Edition (published in 2017), please find the
